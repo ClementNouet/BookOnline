@@ -1,26 +1,43 @@
+/* Base Styles */
+.body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #171919;
+  overflow-x: hidden;
+}
+
+/* Main Layout */
 .main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #171919;
   padding: 10px;
+
 }
 
 .bodyHome {
-  width: 50%;
+  width: 50%; /* Adaptation sur grands écrans */
   padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .title {
-  line-height: 1.15;
   font-size: 4rem;
   color: white;
-  line-height: 100px;
+  line-height: 80px;
   margin-top: 150px;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
 }
 
+.name {
+  font-weight: 800;
+}
+
+/* Keyframes pour l'animation du fond */
 @keyframes slideBackground {
   from {
     background-size: 0% 100%;
@@ -30,6 +47,7 @@
   }
 }
 
+/* Animation du fond pour le lien Développeur FullStack */
 .developpeur {
   color: #171919;
   background-color: #D2D4FF;
@@ -38,6 +56,9 @@
   padding: 10px 20px;
   font-family: 'DM Serif Text', serif;
   font-weight: 500;
+  position: relative; /* Positionner correctement l'élément */
+  overflow: hidden; /* Cacher la partie du fond qui déborde */
+  display: inline-block; /* Empêcher le texte de prendre toute la largeur */
   background: linear-gradient(to right, #D2D4FF, #D2D4FF);
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -45,10 +66,19 @@
 }
 
 .developpeur.animated {
-  animation: slideBackground 1.5s ease forwards; /* Animation au chargement */
+  animation: slideBackground 1.5s ease forwards;
 }
 
+/* Appliquer un fond vert à Clément NOUET et une taille de texte de 16px */
+.clément {
+  margin-top: 20px;
+  font-size: 48px; /* Taille du texte modifiée */
+  padding: 5px 30px;
+  border-radius: 150px;
+  color: #171919;
+}
 
+/* Hover effect on button */
 .buttonHome {
   font-family: 'DM Serif Text', serif;
   font-size: 26px;
@@ -64,6 +94,18 @@
   color: #171919;
 }
 
-.name {
-  font-weight: 800;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bodyHome {
+    width: 90%; /* Prendre plus de largeur sur des écrans plus petits */
+    padding: 0px 20px;
+  }
+
+  .title {
+    font-size: 2.5rem; /* Taille du texte plus petite pour des écrans plus petits */
+  }
+
+  .buttonHome {
+    font-size: 20px; /* Réduire la taille du bouton */
+  }
 }

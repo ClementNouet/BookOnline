@@ -14,22 +14,26 @@ function Home() {
   }, []);
 
   return (
-    <div  className={styles.body}>
+    <div className={styles.body}>
       <main className={styles.main}>
         <Menu />
         <div className={styles.bodyHome}>
           <div>
             <h1 className={styles.title}>
-              <span className={styles.name}>Clément NOUET,</span><br></br>
               <a
                 href="https://nextjs.org"
-                className={`${styles.developpeur} ${
-                  isAnimated ? styles.animated : ''
-                }`}
+                className={`${styles.developpeur} ${isAnimated ? styles.animated : ''}`}
               >
-                Développeur FullStack
+                Développeur FullStack*
               </a>{' '}
               créatif et engagé pour vos projets.
+              <br />
+              {/* Appliquer la classe spécifique pour "Clément NOUET" */}
+              <span
+                className={`${styles.developpeur} ${isAnimated ? styles.animated : ''} ${styles.clément}`}
+              >
+                *Clément NOUET,
+              </span>
             </h1>
             <button className={styles.buttonHome}>Disponible dès maintenant</button>
           </div>
