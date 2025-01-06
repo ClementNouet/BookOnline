@@ -1,0 +1,6 @@
+.main {
+    display: flex;
+    align-content: space-around;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
