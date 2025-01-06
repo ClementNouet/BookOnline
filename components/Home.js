@@ -14,12 +14,13 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div  className={styles.body}>
       <main className={styles.main}>
         <Menu />
         <div className={styles.bodyHome}>
           <div>
             <h1 className={styles.title}>
+              <span className={styles.name}>Clément NOUET,</span><br></br>
               <a
                 href="https://nextjs.org"
                 className={`${styles.developpeur} ${
