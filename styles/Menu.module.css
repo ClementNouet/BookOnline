@@ -1,6 +1,22 @@
+
 .main {
     display: flex;
-    align-content: space-around;
-    min-height: 100vh;
-    padding: 4rem 0;
-  }
+    justify-content: center;
+}
+
+.menu {
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+font-family: 'DM Serif Text', serif;
+font-size: 16px;
+color: white;
+border: #4d4d4d 1.5px solid;
+border-radius: 50px;
+width: 500px;
+padding: 0px;
+}
+
+.menu li {
+    padding: 1em;
+}

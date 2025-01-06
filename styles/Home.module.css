@@ -1,22 +1,65 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 4rem 0;
+  background-color: #171919;
+  padding: 10px;
+}
+
+.bodyHome {
+  width: 50%;
+  padding: 0px 80px;
 }
 
 .title {
   line-height: 1.15;
   font-size: 4rem;
+  color: white;
+  line-height: 100px;
+  margin-top: 150px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
 }
 
-.title a {
-  color: #0070f3;
+@keyframes slideBackground {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.developpeur {
+  color: #171919;
+  background-color: #D2D4FF;
   text-decoration: none;
+  border-radius: 150px;
+  padding: 10px 20px;
+  font-family: 'DM Serif Text', serif;
+  font-weight: 500;
+  background: linear-gradient(to right, #D2D4FF, #D2D4FF);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: color 0.1s ease;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.developpeur.animated {
+  animation: slideBackground 1.5s ease forwards; /* Animation au chargement */
+}
+
+
+.buttonHome {
+  font-family: 'DM Serif Text', serif;
+  font-size: 26px;
+  border: none;
+  background-color: #C6EC64;
+  border-radius: 150px;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.buttonHome:hover {
+  background-color: #D2D4FF;
+  color: #171919;
 }

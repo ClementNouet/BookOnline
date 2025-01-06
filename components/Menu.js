@@ -1,16 +1,14 @@
 import styles from '../styles/Menu.module.css';
+import '@fontsource/dm-serif-text'; 
 
 function Menu() {
   return (
-    <div>
-      <main className={styles.main}>
-        <img src=""/>
-        <ul classNames={styles.menu}>
+    <div className={styles.main}>
+        <ul className={styles.menu}>
             <li>Home</li>
             <li>Projets</li>
             <li>Qui suis-je?</li>
         </ul>
-      </main>
     </div>
   );
 }

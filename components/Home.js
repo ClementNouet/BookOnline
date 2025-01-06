@@ -1,14 +1,39 @@
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
-import Home from '../components/Menu'
+import Menu from '../components/Menu';
+import '@fontsource/poppins';
 
 function Home() {
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    // Ajoute la classe `animated` après le chargement de la page
+    setTimeout(() => {
+      setIsAnimated(true);
+    }, 100); // Délai pour s'assurer que l'animation démarre
+  }, []);
+
   return (
     <div>
-      <Menu/>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Menu />
+        <div className={styles.bodyHome}>
+          <div>
+            <h1 className={styles.title}>
+              <a
+                href="https://nextjs.org"
+                className={`${styles.developpeur} ${
+                  isAnimated ? styles.animated : ''
+                }`}
+              >
+                Développeur FullStack
+              </a>{' '}
+              créatif et engagé pour vos projets.
+            </h1>
+            <button className={styles.buttonHome}>Disponible dès maintenant</button>
+          </div>
+          <img />
+        </div>
       </main>
     </div>
   );
