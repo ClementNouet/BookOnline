@@ -18,5 +18,25 @@ padding: 0px;
 }
 
 .menu li {
+    display: inline-block;
     padding: 1em;
-}
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 150px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #d2d4ff; /* Couleur au survol */
+    color: #171919;
+  }
+  
+  .menu a.active {
+    background-color: #C6EC64; /* Fond bleu pour la page active */
+    color: #171919; /* Texte blanc */
+  }

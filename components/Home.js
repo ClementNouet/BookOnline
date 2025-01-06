@@ -10,7 +10,7 @@ function Home() {
     // Ajoute la classe `animated` après le chargement de la page
     setTimeout(() => {
       setIsAnimated(true);
-    }, 100); // Délai pour s'assurer que l'animation démarre
+    }, 800); // Délai pour s'assurer que l'animation démarre
   }, []);
 
   return (
