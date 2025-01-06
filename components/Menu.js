@@ -1,9 +1,9 @@
-import { useRouter } from 'next/router'; // Importer useRouter
+import { useRouter } from 'next/router';
 import styles from '../styles/Menu.module.css';
 import '@fontsource/dm-serif-text';
 
 function Menu() {
-  const router = useRouter(); // Obtenir les informations sur la route active
+  const router = useRouter(); 
 
   return (
     <div className={styles.main}>
