@@ -1,0 +1,75 @@
+/* Styles globaux */
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #171919;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Conteneur des projets */
+  .projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Carte d'un projet */
+/* Carte d'un projet */
+.projectCard {
+    width: 40%; /* 50% de la largeur parent */
+    aspect-ratio: 2 / 1; /* Proportion rectangulaire */
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  
+    /* Background image styles */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Overlay pour améliorer le contraste */
+  .projectCard:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1;
+  }
+  
+  /* Contenu du projet */
+  .projectContent {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+  }
+  
+  /* Titre */
+  .projectTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #d2d4ff;
+  }
+  
+  /* Langage */
+  .projectLangage {
+    font-size: 1rem;
+    color: #c6c6c6;
+    margin: 5px 0 0;
+  }
+  

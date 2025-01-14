@@ -1,9 +1,32 @@
-/* Base Styles */
-.body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #171919;
-  overflow-x: hidden;
+.bodyHome {
+  display: flex; /* Flexbox pour aligner le texte et le slider */
+  justify-content: space-between; /* Espace entre les deux sections */
+  align-items: center; /* Centrer verticalement */
+  width: 100%; /* Prendre toute la largeur */
+  padding: 20px 80px;
+}
+
+.textSection {
+  width: 50%; /* Occuper 50 % de la largeur */
+  padding-right: 20px; /* Ajouter un espace avec le slider */
+}
+
+.swiperContainer {
+  width: 50%; /* Occuper 50 % de la largeur */
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperSlide img {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ajouter une ombre pour un effet esthétique */
 }
 
 /* Main Layout */
@@ -17,11 +40,10 @@
 }
 
 .bodyHome {
-  width: 50%; /* Adaptation sur grands écrans */
+  width: 100%; /* Adaptation sur grands écrans */
   padding: 0px 80px;
   display: flex;
-  flex-direction: column;
-
+  align-items: center;
 }
 
 .title {

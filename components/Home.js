@@ -2,15 +2,24 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Menu from '../components/Menu';
 import '@fontsource/poppins';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 function Home() {
+  const imgArray = [
+    { img: '/1.jpg' },
+    { img: '/2.jpg' },
+    { img: '/3.jpg' },
+    { img: '/4.jpg' },
+  ];
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
-    // Ajoute la classe `animated` après le chargement de la page
     setTimeout(() => {
       setIsAnimated(true);
-    }, 800); // Délai pour s'assurer que l'animation démarre
+    }, 800); // Délai pour l'animation
   }, []);
 
   return (
@@ -18,7 +27,8 @@ function Home() {
       <main className={styles.main}>
         <Menu />
         <div className={styles.bodyHome}>
-          <div>
+          {/* Texte à gauche */}
+          <div className={styles.textSection}>
             <h1 className={styles.title}>
               <a
                 href="https://nextjs.org"
@@ -28,7 +38,6 @@ function Home() {
               </a>{' '}
               créatif et engagé pour vos projets.
               <br />
-              {/* Appliquer la classe spécifique pour "Clément NOUET" */}
               <span
                 className={`${styles.developpeur} ${isAnimated ? styles.animated : ''} ${styles.clément}`}
               >
@@ -37,7 +46,35 @@ function Home() {
             </h1>
             <button className={styles.buttonHome}>Disponible dès maintenant</button>
           </div>
-          <img />
+
+          {/* Swiper à droite */}
+          <div className={styles.swiperContainer}>
+            <Swiper
+              modules={[Autoplay]}
+              direction={'horizontal'}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+            >
+              {imgArray.map((data, index) => (
+                <SwiperSlide key={index}>
+                  <div className={styles.swiperSlide}>
+                    <img
+                      src={data.img}
+                      alt={`Slide ${index + 1}`}
+                      style={{
+                        width: '500px',
+                        height: '500px',
+                        objectFit: 'cover',
+                        borderRadius: '800px',
+                      }}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </main>
     </div>
